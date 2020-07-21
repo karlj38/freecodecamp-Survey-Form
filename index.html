@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <header id="header">
+        <h1 id="title">FreeCodeCamp Survey Form</h1>
+        <p id="description">
+          Thank you for taking the time to help us improve the platform
+        </p>
+      </header>
+
+      <form id="survey-form" action="POST">
+        <label for="yourName" id="name-label">Name:</label>
+        <input
+          type="text"
+          name="yourName"
+          id="name"
+          placeholder="Enter your name"
+          required
+        />
+        <label for="yourEmail" id="email-label">Email:</label>
+        <input
+          type="email"
+          name="yourEmail"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+        <label for="yourAge" id="number-label">Age:</label>
+        <input
+          type="number"
+          name="yourAge"
+          id="number"
+          min="18"
+          max="99"
+          placeholder="Enter your age (18+)"
+        />
+        <label for="yourRole" id="role-label"
+          >Which option best describes your current role?</label
+        >
+        <select name="yourRole" id="dropdown">
+          <option value="student">Student</option>
+          <option value="employee">Employee</option>
+          <option value="employer">Employer</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="recommend">Would you recommend FreeCodeCamp?</label>
+        <label for="yes">Yes</label>
+        <input type="radio" name="recommend" id="yes" value="yes" />
+        <label for="no">No</label>
+        <input type="radio" name="recommend" id="no" value="no" />
+        <label for="yourInterest">Please select your areas of interest:</label>
+        <label for="html">HTML</label>
+        <input type="checkbox" name="yourInterest" id="html" value="HTML" />
+        <label for="css">CSS</label>
+        <input type="checkbox" name="yourInterest" id="css" value="CSS" />
+        <label for="js">JS</label>
+        <input type="checkbox" name="yourInterest" id="js" value="JS" />
+        <label for="yourComments"
+          >Please enter any other comments you wish to share in the area
+          below:</label
+        >
+        <textarea
+          name="yourComments"
+          id="comments"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
